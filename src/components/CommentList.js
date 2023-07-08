@@ -10,9 +10,10 @@ const CommentList = ({ comments }) => {
             return(
                 <div key = {comments.id}>
                   <Comment data = {comments} setShowComment = {setShowComment} />
-                 <div key = {comments.id} className = "ml-5">
+                  {/* This code is for nested comments or replies data */}
+                 {/* <div key = {comments.id} className = "ml-5">
                  {showComment ? <CommentList comments = {comments?.snippet?.totalReplyCount}/> : null }
-                 </div>
+                 </div> */}
                   </div>
                 
             )

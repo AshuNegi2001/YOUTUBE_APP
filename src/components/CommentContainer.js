@@ -224,7 +224,7 @@ const CommentContainer = ({ videoid }) => {
     }
   return (
     <div className = "my-3 mx-2">
-        {/* <div className = "font-semibold">[{commentData.length}] Comments</div> */}
+        <div className = "font-semibold">{commentData.length} Comments</div>
         <div className = "border"></div>
         <div><CommentList comments = {commentData} /></div>
     </div>

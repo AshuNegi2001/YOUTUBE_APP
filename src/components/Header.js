@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { toogleMenu } from "../utils/navSlice";
 import { addData } from "../utils/searchVideoSlice";
 import { useDispatch } from "react-redux";
-import SuggestionData from "./SuggestionData";
+import Suggestion from "./Suggestion";
 import { useSelector } from "react-redux";
 import { YOUTUBE_SEARCH_SUGGESTION_API, GOOGLE_API_KEY } from "../Constants";
 import { cacheResult } from "../utils/searchSlice";
@@ -18,9 +18,8 @@ const Header = () => {
   const [suggestionData, setSuggestionData] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [effectCall, setEffectCall] = useState(false);
+  const [selectedQuery, setSelectedQuery] = useState("");
 
-
-  
 
   // filter video:
   useEffect(() => {
@@ -84,10 +83,6 @@ const Header = () => {
     dispatch(toogleMenu());
   };
 
-
-  
-  
-
   return (
     <>
       <div className="sticky top-0 left-0 z-30 grid grid-flow-col bg-white ">
@@ -121,7 +116,8 @@ const Header = () => {
               onFocus={() => setShowSuggestion(true)}
               onBlur={() => setShowSuggestion(false)}
               onChange={(e) => {
-                setSearchQuery(e.target.value);
+                setSearchQuery(e.target.value)
+                
               }}
             />
              
@@ -149,7 +145,7 @@ const Header = () => {
           {showSuggestion ? (
             <div className="border w-2/5 fixed top-14 bg-white rounded-lg shadow-lg">
               {suggestionData.map((query, index) => {
-                return <SuggestionData key={index} info={query} />;
+                return <Suggestion key={index} info={query} />
               })}
             </div>
           ) : null}

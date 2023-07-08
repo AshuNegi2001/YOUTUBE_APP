@@ -1,4 +1,4 @@
-const SuggestionData = ({info}) => {
+const Suggestion = ({info}) => {
   return (
     <>
     <div className = "p-2 hover:bg-gray-200 hover:rounded-lg cursor-pointer" >{info} </div>
@@ -6,4 +6,4 @@ const SuggestionData = ({info}) => {
   )
 }
 
-export default SuggestionData;
+export default Suggestion;
