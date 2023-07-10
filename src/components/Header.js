@@ -85,7 +85,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="sticky top-0 left-0 z-30 grid grid-flow-col bg-white ">
+      <div className="sticky top-0 left-0 z-30 grid grid-flow-col bg-white w-full ">
         <div className="flex col-span-1 pl-3">
           <img
             onClick={() => toggleMenuHandler()}

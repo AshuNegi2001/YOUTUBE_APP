@@ -17,3 +17,6 @@ export const shimmer_card_unit = 20;
 
 //channelId details api:
 // export const CHANNEL_DETAILS_API = "https://www.googleapis.com/youtube/v3/channels?key=" + GOOGLE_API_KEY + "&part=statistics&part=snippet&id=" + channelId;
+
+// Individual video details api  through videoId:
+// export const VIDEO_DETAILS_API = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=[videoId]&key=[YOUR_API_KEY]"

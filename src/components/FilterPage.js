@@ -26,7 +26,7 @@ const FilterPage = () => {
         ) : (
           searchVideoData.map((video, index) => {
             return (
-              <Link key={index} to={"/watch?v=" + video.id.videoId}>
+              <Link key={index} to={"/watch?v=" + video.id.videoId + "&c="  + video?.snippet?.channelId }>
                 <FilterCard info={video}></FilterCard>
               </Link>
             );

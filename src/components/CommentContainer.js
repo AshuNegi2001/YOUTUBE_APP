@@ -218,7 +218,7 @@ const CommentContainer = ({ videoid }) => {
         const data =  await fetch("https://www.googleapis.com/youtube/v3/commentThreads?key=" + GOOGLE_API_KEY  + "&textFormat=plainText&part=snippet&videoId=" + videoId);
         const json = await data.json();
         setCommentData(json.items)
-        console.log(json.items);
+        // console.log(json.items);
         
 
     }

@@ -31,7 +31,7 @@ const LiveChat = () => {
   return (
     <>
       {hideChat ? (
-        <div className = "bg-gray-50 border h-[600px] rounded-lg shadow-lg">
+        <div className = "border h-[600px] rounded-lg shadow-lg mb-6">
           <div className="flex p-3">
             <div className="text-base">Top chat</div>
             <div className="flex items-center px-1 cursor-pointer">
@@ -51,10 +51,10 @@ const LiveChat = () => {
             <LiveMessage />
           </div>
           <div className="border"></div>
-          <div className = "flex justify-center my-2"><button  className = " w-11/12 my-auto hover:rounded-lg p-1 items-center hover:bg-slate-100 " onClick={() => setHideChat(!hideChat)}>Hide chat</button>
+          <div className = "flex justify-center my-2"><button  className = " w-11/12 my-auto hover:rounded-full p-1 items-center hover:bg-slate-100 " onClick={() => setHideChat(!hideChat)}>Hide chat</button>
         </div></div>
       ) : (
-        <div className = "h-[50px] w-full flex justify-center"><button  className = " rounded-lg hover:bg-slate-100 w-11/12 p-1  my-2" onClick={() => setHideChat(!hideChat)}>Show chat</button></div>
+        <div className = "h-[50px] w-full flex justify-center mb-2"><button  className = "border rounded-full hover:bg-slate-100 w-full my-2" onClick={() => setHideChat(!hideChat)}>Show chat</button></div>
       )}
     </>
   );

@@ -16,7 +16,7 @@ const VideoContainer = () => {
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEOS_API);
     const json = await data.json();
-    // console.log(json?.items);
+    console.log(json?.items);
     setVideos(json?.items);
   };
 
@@ -25,10 +25,10 @@ const VideoContainer = () => {
   return videos.length === 0 ? (
     <ShimmerVideoCard />
   ) : (
-    <div className="flex flex-wrap my-2">
+    <div className="flex flex-wrap">
       {videos.map((video, index) => {
         return (
-          <Link key={index} to={"/watch?v=" + video.id}>
+          <Link key={index} to={"/watch?v=" + video.id + "&c="  + video?.snippet?.channelId }>
             <VideoCard info={video} />
           </Link>
         );

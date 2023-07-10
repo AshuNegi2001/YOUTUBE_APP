@@ -18,7 +18,7 @@ const ButtonList = () => {
   ];
   return (
     <>
-      <div className="flex fixed mx-2 z-20 bg-white px-3 pb-3">
+      <div className="flex sticky top-16 mx-2 z-20 bg-white px-3 pb-3">
         {list.map((item, index) => {
           return (
               <Button key={index} name={item}></Button>

@@ -1,8 +1,21 @@
+import useGetChannel from "../utils/useGetChannel.js";
+// import { useEffect, useState } from "react";
+// import { GOOGLE_API_KEY } from "../Constants";
+
 const FilterCard = ({ info }) => {
   // console.log(info);
+  // const [channelItems, setChannelItems] = useState();
+
+ 
+
+  
   const {
-    snippet: { channelTitle, description, thumbnails, title },
+    snippet: { channelTitle, channelId, description, thumbnails, title },
   } = info;
+  console.log(channelId);
+  
+  const channelDetails = useGetChannel(channelId);
+  // console.log(channelDetails);
   return (
     <>
       <div className="w-full h-52">
@@ -23,7 +36,7 @@ const FilterCard = ({ info }) => {
               <div>
                 <img
                   className="w-5 mr-2 rounded-full"
-                  src="https://yt3.ggpht.com/zgMN9BuSQByG1SrpmLwcNB3MQhjDhS_pl9H1h7TaRievMfS4UpU7Z36j77z5_hnIW4N8uFX3NA=s68-c-k-c0x00ffffff-no-rj"
+                  src={channelDetails?.snippet?.thumbnails?.medium?.url}
                   alt="channel-image"
                 />
               </div>

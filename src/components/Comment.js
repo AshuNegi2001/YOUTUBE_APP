@@ -12,7 +12,7 @@ const Comment = ({ data, setShowComment }) => {
   } = topLevelComment;
 
   return (
-    <div className="bg-gray-100 flex my-1 px-2 py-1 rounded-md">
+    <div className="flex my-1 px-2 py-1 rounded-md">
       <div className="mt-2 w-1/12  flex flex-col items-center">
         <img
           className="w-8 rounded-full"
