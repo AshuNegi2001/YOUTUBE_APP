@@ -6,7 +6,7 @@ const VideoDescription = () => {
   // console.log(searchVideoParams.get("v"));
 
   const videoData = useGetVideoData(searchVideoParams.get("v"));
-  console.log(videoData);
+  // console.log(videoData);
   
   return (
     <>

@@ -35,14 +35,17 @@ const approuter = createBrowserRouter([
           {
             path: "/",
             element: <MainContainer />,
+            
           },
           {
             path: "watch",
             element: <WatchPage />,
+            
           },
           {
             path: "filter",
             element: <FilterPage />,
+            
           },
         ],
       },

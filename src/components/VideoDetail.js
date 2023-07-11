@@ -13,7 +13,7 @@ const VideoDetail = ({channelId}) => {
   // console.log(channelDetails);
 
   const videoData = useGetVideoData(searchVideoParams.get("v"));
-  console.log(videoData);
+  // console.log(videoData);
 
   return (
     <>

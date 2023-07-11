@@ -4,7 +4,7 @@ import { useState } from "react";
 const CommentList = ({ comments }) => {
   const [showComment, setShowComment] = useState(false);
   
-  return (
+  return comments.length === 0 ? null :(
     <div>
         {comments.map((comments)=>{
             return(

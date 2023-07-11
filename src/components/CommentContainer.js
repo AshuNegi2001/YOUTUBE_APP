@@ -1,6 +1,7 @@
 import CommentList from "./CommentList";
 import { useState, useEffect } from "react";
 import { GOOGLE_API_KEY } from "../Constants";
+import { useSearchParams } from "react-router-dom";
 
 // Dummy CommentData:
 //  const commentsData = [{
@@ -206,16 +207,17 @@ import { GOOGLE_API_KEY } from "../Constants";
 // },
 // ]
 
-const CommentContainer = ({ videoid }) => {
+const CommentContainer = ( ) => {
     const [commentData , setCommentData] = useState([]);
-    const [videoId]  = useState(videoid);
+    const [searchVedioParams] = useSearchParams();
+    
 
     useEffect(()=>{
         getComments();
-    },[videoId])
+    },[searchVedioParams.get("v")])
 
     const getComments = async () =>{
-        const data =  await fetch("https://www.googleapis.com/youtube/v3/commentThreads?key=" + GOOGLE_API_KEY  + "&textFormat=plainText&part=snippet&videoId=" + videoId);
+        const data =  await fetch("https://www.googleapis.com/youtube/v3/commentThreads?key=" + GOOGLE_API_KEY  + "&textFormat=plainText&part=snippet&videoId=" + searchVedioParams.get("v"));
         const json = await data.json();
         setCommentData(json.items)
         // console.log(json.items);

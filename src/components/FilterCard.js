@@ -6,13 +6,11 @@ const FilterCard = ({ info }) => {
   // console.log(info);
   // const [channelItems, setChannelItems] = useState();
 
- 
-
   
   const {
     snippet: { channelTitle, channelId, description, thumbnails, title },
   } = info;
-  console.log(channelId);
+  // console.log(channelId);
   
   const channelDetails = useGetChannel(channelId);
   // console.log(channelDetails);

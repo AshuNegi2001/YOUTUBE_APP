@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import FilterCard from "./FilterCard";
 import { Link } from "react-router-dom";
-
 import ShimmerFilterCard from "./ShimmerFilterCard";
 
 const FilterPage = () => {
@@ -26,7 +25,7 @@ const FilterPage = () => {
         ) : (
           searchVideoData.map((video, index) => {
             return (
-              <Link key={index} to={"/watch?v=" + video.id.videoId + "&c="  + video?.snippet?.channelId }>
+              <Link key={index} to={"/watch?v=" + video?.id?.videoId + "&c="  + video?.snippet?.channelId }>
                 <FilterCard info={video}></FilterCard>
               </Link>
             );

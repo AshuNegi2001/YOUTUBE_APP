@@ -1,7 +1,7 @@
 export const LIVE_CHAT_COUNT = 30;
 
-// export const GOOGLE_API_KEY = "AIzaSyBVACv_sra1lnmO2Z8eLaYqjUV1-F-LZGQ"; // old id
-export const GOOGLE_API_KEY = "AIzaSyCoja6KfNSmBaInK8t5h6ppY5exst5ubwI"; // new id
+export const GOOGLE_API_KEY = "AIzaSyBVACv_sra1lnmO2Z8eLaYqjUV1-F-LZGQ"; // old id
+// export const GOOGLE_API_KEY = "AIzaSyCoja6KfNSmBaInK8t5h6ppY5exst5ubwI"; // new id
 
 export const YOUTUBE_VIDEOS_API = " https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + GOOGLE_API_KEY;
 
@@ -20,3 +20,6 @@ export const shimmer_card_unit = 20;
 
 // Individual video details api  through videoId:
 // export const VIDEO_DETAILS_API = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=[videoId]&key=[YOUR_API_KEY]"
+
+// RelatedVideoList API THROUGH keywords:
+// export const RELATED_VIDEOLIST_API = " https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=[YOUR_API_KEY]"

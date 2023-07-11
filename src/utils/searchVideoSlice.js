@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 const searchVideoSlice = createSlice({
     name : "searchVideo",
-    initialState:[],
+    initialState: [null],
     reducers: {
         addData : (state, action) => {
-            const data = [...action.payload];
-            return state = data;
+            return state = [...action.payload];
+            
             
         }
     }

@@ -18,7 +18,7 @@ const Header = () => {
   const [suggestionData, setSuggestionData] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [effectCall, setEffectCall] = useState(false);
-  const [selectedQuery, setSelectedQuery] = useState("");
+  
 
 
   // filter video:

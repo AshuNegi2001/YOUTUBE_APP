@@ -37,7 +37,7 @@ const WatchPage = () => {
             <VideoInfo channelId={searchChannelParams.get("c")} />
           </div>
           <div>
-            <CommentContainer videoid={searchVideoParams.get("v")} />
+            <CommentContainer />
           </div>
         </div>
         <div className="w-[375px]">
