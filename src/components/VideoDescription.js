@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import useGetVideoData from "../utils/useGetVideoData";
+import numberConverter from "../utils/numberConverter";
 
 const VideoDescription = () => {
   const [searchVideoParams] = useSearchParams();
@@ -7,12 +8,13 @@ const VideoDescription = () => {
 
   const videoData = useGetVideoData(searchVideoParams.get("v"));
   // console.log(videoData);
+  const views = numberConverter(videoData?.statistics?.viewCount);
   
   return (
     <>
       <div className="p-2 my-4 bg-gray-50 rounded-lg">
         <div className = "flex">
-          <div>{videoData?.statistics?.viewCount}views</div>
+          <div>{views} views</div>
           <div className = "px-2">{videoData?.snippet?.publishedAt}</div>
         </div>
         <div className = "line-clamp-2">

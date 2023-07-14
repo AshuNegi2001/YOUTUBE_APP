@@ -10,13 +10,17 @@ const useGetVideoData = (videoId) =>{
         // API call for getting individual video data:
         getVideoDetail();
     
-      }, [videoId])
+      }, [videoId]);
     
       const getVideoDetail =  async () => {
-        const data = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=" + videoId +"&key=" + GOOGLE_API_KEY) ;
+        try{
+          const data = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=" + videoId +"&key=" + GOOGLE_API_KEY) ;
         const json = await data.json();
         // console.log(json?.items[0]);
         setVideoData(json?.items[0]);
+        }catch(error){
+          console.log(error);
+        }
       }
 
     return videoData;

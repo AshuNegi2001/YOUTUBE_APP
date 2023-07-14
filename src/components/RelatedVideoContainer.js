@@ -18,15 +18,19 @@ const RelatedVideoContainer = () => {
   }, [videoData]);
 
   const getRelatedVedioList = async () => {
-    const data = await fetch(
-      "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=" +
-        videoData?.snippet?.localized?.title +
-        "&key=" +
-        GOOGLE_API_KEY
-    );
-    const json = await data.json();
-    // console.log(json.items);
-    setRelatedVideoList(json.items);
+    try{
+      const data = await fetch(
+        "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=" +
+          videoData?.snippet?.localized?.title +
+          "&key=" +
+          GOOGLE_API_KEY
+      );
+      const json = await data.json();
+      // console.log(json.items);
+      setRelatedVideoList(json.items);
+    }catch(error){
+      console.log(error);
+    }
   };
  // Here, I used early return :
   return (relatedVideoList?.length === 0 ?  null : (

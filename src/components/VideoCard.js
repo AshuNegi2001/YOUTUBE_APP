@@ -1,3 +1,4 @@
+import numberConverter from "../utils/numberConverter";
 import useGetChannel from "../utils/useGetChannel";
 
 const VideoCard = ({ info }) => {
@@ -12,6 +13,7 @@ const VideoCard = ({ info }) => {
   const channelDetails = useGetChannel(channelId);
   // console.log(channelDetails);
 
+  const views =numberConverter(statistics?.viewCount);
   return (
     <>
       <div className="w-72 justify-between h-[260px] p-2 hover:shadow-lg hover:rounded-lg hover:scale-105 mx-1 mt-3 mb-2 cursor-pointer">
@@ -33,7 +35,7 @@ const VideoCard = ({ info }) => {
           <div className="w-10/12">
             <div className="line-clamp-2 font-semibold text-base">{title}</div>
             <div className="text-sm font-normal text-gray-600">{channelTitle}</div>
-            <div className="text-sm font-normal text-gray-600">{statistics?.viewCount} views</div>
+            <div className="text-sm font-normal text-gray-600">{views} views</div>
           </div>
         </div>
 

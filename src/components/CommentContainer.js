@@ -217,14 +217,17 @@ const CommentContainer = ( ) => {
     },[searchVedioParams.get("v")])
 
     const getComments = async () =>{
-        const data =  await fetch("https://www.googleapis.com/youtube/v3/commentThreads?key=" + GOOGLE_API_KEY  + "&textFormat=plainText&part=snippet&videoId=" + searchVedioParams.get("v"));
+        try{
+          const data =  await fetch("https://www.googleapis.com/youtube/v3/commentThreads?key=" + GOOGLE_API_KEY  + "&textFormat=plainText&part=snippet&videoId=" + searchVedioParams.get("v"));
         const json = await data.json();
         setCommentData(json.items)
         // console.log(json.items);
-        
-
+        }catch(error){
+          console.log(error);
+        }
     }
-  return (
+
+  return commentData.length === 0 ? null : (
     <div className = "my-3 mx-2">
         <div className = "font-semibold">{commentData.length} Comments</div>
         <div className = "border"></div>

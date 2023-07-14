@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import VideoCard from "./VideoCard";
-// import { YOUTUBE_VIDEOS_API } from "../Constants";
+import { YOUTUBE_VIDEOS_API } from "../Constants";
 import { Link } from "react-router-dom";
 import ShimmerVideoCard from "./ShimmerVideoCard";
-import { GOOGLE_API_KEY } from "../Constants";
 
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
@@ -15,11 +14,15 @@ const VideoContainer = () => {
   }, []);
 
   const getVideos = async () => {
-    const data = await fetch(" https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + GOOGLE_API_KEY);
+    try{
+      const data = await fetch(YOUTUBE_VIDEOS_API);
     const json = await data.json();
     // console.log(json?.items);
     setVideos(json?.items);
-  };
+    }catch(error){
+      console.log(error);
+    }
+  }
 
   // console.log(channelItems)
 
