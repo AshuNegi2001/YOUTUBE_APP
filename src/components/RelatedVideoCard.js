@@ -2,7 +2,8 @@ import numberConverter from "../utils/numberConverter";
 import useGetChannel from "../utils/useGetChannel";
 import useGetVideoData from "../utils/useGetVideoData";
 import { useSearchParams } from "react-router-dom";
-import { BsCheckCircleFill } from "react-icons/bs";
+import { BsCheckCircleFill, BsDot } from "react-icons/bs";
+import getTimeAgo from "../utils/getTimeAgo";
 
 const RelatedVideoCard = ({ info }) => {
   const [searchChannelParams] = useSearchParams();
@@ -21,6 +22,8 @@ const RelatedVideoCard = ({ info }) => {
   const channelDetails = useGetChannel(searchChannelParams.get("c"));
   
   const views = numberConverter(videoData?.statistics?.viewCount);
+  const time = getTimeAgo(publishedAt);
+
   return (
     <>
       <div className="flex mb-2">
@@ -36,9 +39,10 @@ const RelatedVideoCard = ({ info }) => {
           <div className = "text-[10px] pl-1 text-gray-500">{channelDetails?.statistics?.subscriberCount >= 100000 ? <BsCheckCircleFill/> : null }
           </div>
           </div>
-          <div className="flex text-xs text-gray-500 my-[2px]">
-            <div className="mr-2">{views} views</div>
-            <div className = "line-clamp-1">{publishedAt}</div>
+          <div className="flex  items-center text-xs text-gray-500 my-[2px]">
+            <div className="mr-1">{views} views</div>
+            <div className =""><BsDot /></div>
+            <div className = "line-clamp-1">{time}</div>
           </div>
         </div>
       </div>

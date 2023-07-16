@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
 import youtubeLogo from "../assets/images/youtubeLogo.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -89,7 +90,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="sticky top-0 left-0 z-30 grid grid-flow-col bg-white w-full ">
+      <div className="fixed top-0 left-0 z-30 grid grid-flow-col bg-white w-[calc(100%-15px)] ">
         <div className="flex col-span-1 pl-3">
           <div
             className=" flex items-center text-2xl pl-2 cursor-pointer"
@@ -145,11 +146,7 @@ const Header = () => {
           ) : null}
         </div>
         <div className="flex items-center col-span-1 justify-end pr-5 py-3">
-          <img
-            className="h-6 "
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLofYcMFJ_UMGFVkCYeQMtcJjJE8E51M_1D4Z-gHDiNchrISGSqpj8XikDYV_VfTm0pJA&usqp=CAU"
-            alt="user"
-          />
+        <div className = "text-3xl"><FaUserCircle/></div>
         </div>
       </div>
     </>

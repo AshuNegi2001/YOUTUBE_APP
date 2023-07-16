@@ -1,7 +1,11 @@
 export const LIVE_CHAT_COUNT = 30;
 
-// export const GOOGLE_API_KEY = "AIzaSyBVACv_sra1lnmO2Z8eLaYqjUV1-F-LZGQ"; // old id
-export const GOOGLE_API_KEY = "AIzaSyCoja6KfNSmBaInK8t5h6ppY5exst5ubwI"; // new id
+// export const GOOGLE_API_KEY = "AIzaSyBVACv_sra1lnmO2Z8eLaYqjUV1-F-LZGQ"; // ashunegi686@gmail.com
+// export const GOOGLE_API_KEY = "AIzaSyBajfoUi6-BonNCiJcVdo17DU3OCK4dDBU"; // 2000ashunegi@gmail.com
+// export const GOOGLE_API_KEY = "AIzaSyAS7sRqp_nrz2tqxk6Z94L846TmIXNUV1E"; // neemanegi900@gmail.com
+export const GOOGLE_API_KEY = "AIzaSyDyUFw0xjJNtsYpcFOrZIATsAN3G9YetHw"; // 686negi@gmail.com
+// export const GOOGLE_API_KEY = "AIzaSyC1pw2B4zdFm-VFKctlBIqPlWvCIX42aLQ"; // 686ashu@gmail.com
+// export const GOOGLE_API_KEY = "AIzaSyCoja6KfNSmBaInK8t5h6ppY5exst5ubwI"; // 527ashunegi@gmail.com
 
 export const YOUTUBE_VIDEOS_API = " https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + GOOGLE_API_KEY;
 

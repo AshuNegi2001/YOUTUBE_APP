@@ -22,7 +22,7 @@ const Comment = ({ data, setShowComment }) => {
       </div>
       <div className="flex flex-col w-11/12">
         <div className="font-bold">{authorDisplayName}</div>
-        <div>{textDisplay}</div>
+        <div className = "line-clamp-5">{textDisplay}</div>
 
         {/* This code  we will use when we have replies data */}
 

@@ -9,7 +9,7 @@ const FilterPage = () => {
 
   return (
     <>
-      <div className="w-5/6">
+      <div className="w-5/6 mt-16">
         <div className="w-3/4 mx-auto border-b">
           <div className="flex w-24 pl-2 py-1 hover:bg-gray-100 cursor-pointer hover:rounded-2xl">
             <img

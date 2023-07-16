@@ -11,14 +11,16 @@ const WatchPage = () => {
   const [searchVideoParams] = useSearchParams(); // we use useSearchParams to get search param id from search section.
   // console.log(searchVideoParams.get("v")); // for searching the param id through search
   const [searchChannelParams] = useSearchParams();
-  console.log(searchChannelParams.get("c"));
+  // console.log(searchChannelParams.get("c"));
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div className="absolute left-0 z-0 w-full ">
+     
+       <div className="absolute left-0 z-0 w-full top-20">
       <div className=" mx-auto w-10/12  flex justify-between ">
         <div className="w-4/6">
           <div>
@@ -50,7 +52,7 @@ const WatchPage = () => {
         </div>
       </div>
     </div>
-  );
+     );
 };
 
 export default WatchPage;
