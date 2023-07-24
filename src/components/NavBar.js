@@ -154,7 +154,7 @@ const NavBar = () => {
                   <div className="text-xl">
                     <FaUserCircle />
                   </div>
-                  <div className="ml-5">codeWithHarry</div>
+                  <div className="ml-5">CodeWithHarry</div>
                 </div>
               </li>
               <li className="px-5 py-2 cursor-pointer hover:bg-gray-200 hover:rounded-lg mx-2">
