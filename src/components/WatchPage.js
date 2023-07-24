@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { closeMenu } from "../utils/navSlice";
+import { closeMenu,toogleMenu } from "../utils/navSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentContainer from "./CommentContainer";
 import LiveChat from "./LiveChat";
@@ -20,7 +20,7 @@ const WatchPage = () => {
   }, []);
   return (
      
-       <div className="absolute left-0 z-0 w-full top-20">
+       <div className="absolute left-0 z-0 w-full top-20" >
       <div className=" mx-auto w-10/12  flex justify-between ">
         <div className="w-4/6">
           <div>

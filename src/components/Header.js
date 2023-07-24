@@ -90,27 +90,27 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-30 grid grid-flow-col bg-white w-[calc(100%-15px)] ">
-        <div className="flex col-span-1 pl-3">
+      <div className="fixed top-0 left-0 z-30 flex  md:w-[calc(100%-15px)] sm:w-[calc(100%-13px)] xsm:w-[calc(100%-11px)] w-[calc(100%-9px)] bg-white justify-evenly h-14 ">
+        <div className=" flex  lg:2/12 md:w-3/12 w-4/12 ">
           <div
-            className=" flex items-center text-2xl pl-2 cursor-pointer"
+            className=" flex items-center text-2xl px-1 my-2 cursor-pointer hover:rounded-full hover:bg-gray-200"
             onClick={() => toggleMenuHandler()}
           ><RxHamburgerMenu /></div>
           <img
-            className="h-[60px] w-32 cursor-pointer"
+            className=" h-14 w-32 cursor-pointer"
             src={youtubeLogo}
             alt="logo"
           />
         </div>
 
-        <div className="flex flex-col items-center col-span-10 justify-center">
-          <div className="flex w-full justify-center">
-            <div className = "w-1/2 flex">
+        <div className="flex flex-col md:w-7/12 w-6/12  items-center justify-center xsm:ml-0 ml-5">
+          <div className="flex w-full xsm:justify-center justify-start ">
+            <div className = "sm:w-1/2 xsm:w-3/5 w-4/5 flex">
             {!showSearchIcon ? null : <div className="h-8 p-2 border-y border-l border-r-none rounded-l-full focus:border-r-none focus:roun"><GoSearch />
               </div>}
 
             <input
-              className="border w-full h-8 py-1 pl-3  outline-none rounded-l-full focus:rounded-l-none focus:border-l-0 focus:pl-1" onClick = {()=>{setShowSearchIcon(true)}}
+              className="border w-full  h-8 py-1 pl-3  outline-none rounded-l-full focus:rounded-l-none focus:border-l-0 focus:pl-1" onClick = {()=>{setShowSearchIcon(true)}}
               type="text"
               placeholder="Search"
               value={searchQuery}
@@ -145,7 +145,7 @@ const Header = () => {
             </div>
           ) : null}
         </div>
-        <div className="flex items-center col-span-1 justify-end pr-5 py-3">
+        <div className=" flex items-center w-1/12 justify-end xsm:pr-3 pr-1 py-3">
         <div className = "text-3xl"><FaUserCircle/></div>
         </div>
       </div>

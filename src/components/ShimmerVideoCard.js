@@ -20,7 +20,7 @@ const Shimmer = () => {
 const ShimmerVideoCard = () => {
   return (
     <>
-      <div className = "flex flex-wrap">
+      <div className = "flex flex-wrap mt-24 mb-8">
         {new Array(shimmer_card_unit).fill().map((_, index)=>{
             return (
                 <Shimmer key = {index}/>

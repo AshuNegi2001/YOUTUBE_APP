@@ -24,7 +24,7 @@ const Shimmer = () => {
 const ShimmerFilterCard = () => {
   return (
     <>
-      <div>
+      <div className = "mt-14">
         {new Array(shimmer_card_unit).fill().map((_, index) => { // this `_` is needed because if we will not pass this `_` then, it will show error  to us that key should be unique.
           return <Shimmer key={index} />;
         })}

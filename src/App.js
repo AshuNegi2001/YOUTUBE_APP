@@ -15,7 +15,7 @@ const AppLayout = () => {
   return (
     <>
       <Provider store={store}>
-        <div className = "overflow-y-scroll h-screen">
+        <div className = "overflow-y-scroll h-screen flex-grow">
         <Header />
         <Outlet /> {/* I passed Outlet here because In createBrowserRouter I passed body as children that why I used here Outlet component.*/}
         </div>
