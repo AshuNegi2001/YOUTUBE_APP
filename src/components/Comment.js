@@ -7,6 +7,7 @@ const Comment = ({ data, setShowComment }) => {
   const {
     snippet: { topLevelComment, totalReplyCount },
   } = data;
+  
   const {
     snippet: { textDisplay, authorDisplayName, authorProfileImageUrl },
   } = topLevelComment;
