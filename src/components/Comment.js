@@ -25,7 +25,7 @@ const Comment = ({ data, setShowComment }) => {
         <div className="font-bold">{authorDisplayName}</div>
         <div className = "line-clamp-5">{textDisplay}</div>
 
-        {/* This code  we will use when we have replies data */}
+        {/* This code  we will use when we have replies data.*/}
 
         {/* {totalReplyCount === 0 ? null : <div className = "flex hover:bg-blue-200 rounded-2xl h-7 w-24 hover:cursor-pointer text-blue-600">
           <div className = "my-auto px-1"> {show ? <div onClick = {()=>{setShow(false)
